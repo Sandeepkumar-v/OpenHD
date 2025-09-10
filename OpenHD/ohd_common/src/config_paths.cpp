@@ -86,8 +86,6 @@ const char* getVideoPath() {
     outfile << cachedPath;
   }
 
-  std::cout << "Path Selected: " << selectedPath << "\n";
-
   return cachedPath.c_str();
 }
 
