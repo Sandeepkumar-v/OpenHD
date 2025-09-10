@@ -86,6 +86,8 @@ const char* getVideoPath() {
     outfile << cachedPath;
   }
 
+  m_console->warn(cachedPath);
+
   return cachedPath.c_str();
 }
 
