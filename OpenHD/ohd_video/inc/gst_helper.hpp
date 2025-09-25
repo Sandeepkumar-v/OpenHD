@@ -122,7 +122,7 @@ static std::string gst_create_rtp_caps(const VideoCodec& videoCodec) {
 static std::string create_rtp_packetize_for_codec(const VideoCodec codec,
                                                   const uint32_t mtu) {
   if (codec == VideoCodec::H264)
-    return fmt::format("rtph264pay mtu={} ! ", mtu);
+    return fmt::format("rtph264pay config-interval=1 pt=96 mtu={} ! ", mtu);
   if (codec == VideoCodec::H265)
     return fmt::format("rtph265pay mtu={} ! ", mtu);
   assert(false);
